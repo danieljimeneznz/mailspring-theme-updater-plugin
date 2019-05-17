@@ -1,0 +1,25 @@
+{
+  "name": "unread",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "engines": {
+    "mailspring": ">=1.6.1"
+  },
+  "windowTypes": {
+    "default": true,
+    "composer": true
+  },
+  "description": "Enter a description of your package!",
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
+}
