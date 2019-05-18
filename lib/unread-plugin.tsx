@@ -1,4 +1,10 @@
-import { React, FocusedContentStore, Thread } from "mailspring-exports";
+import {
+  React,
+  FocusedContentStore,
+  Thread,
+  FocusedPerspectiveStore
+} from "mailspring-exports";
+import databaseStore from "../../Mailspring/app/src/flux/stores/database-store";
 
 interface UnreadPluginState {
   content: Thread;
@@ -27,6 +33,8 @@ export default class UnreadPlugin extends React.Component<
   componentDidMount() {
     console.log("UnreadComponent Mounted!");
     this.unsubscribers.push(FocusedContentStore.listen(this._onChange));
+    this.unsubscribers.push(FocusedPerspectiveStore.listen(this._onChange));
+    this.unsubscribers.push(databaseStore.listen(this._onChange));
   }
 
   componentWillUnmount() {
@@ -35,6 +43,8 @@ export default class UnreadPlugin extends React.Component<
 
   _onChange = () => {
     this.setState(this._getStateFromStores());
+    console.log(FocusedPerspectiveStore.current().threads());
+    console.log(FocusedPerspectiveStore.current().threads());
     console.log(this.state);
   };
 

@@ -1,5 +1,6 @@
 import { ComponentRegistry, WorkspaceStore } from "mailspring-exports";
 
+
 import UnreadPlugin from "./unread-plugin";
 
 // Activate is called when the package is loaded. If your package previously
