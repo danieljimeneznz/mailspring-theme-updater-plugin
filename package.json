@@ -1,5 +1,5 @@
 {
-  "name": "unread",
+  "name": "theme-updater",
   "main": "./lib/main",
   "version": "0.1.0",
   "repository": {
@@ -17,7 +17,9 @@
     "composer": true
   },
   "description": "Enter a description of your package!",
-  "dependencies": {},
+  "dependencies": {
+    "nodegit": "^0.24.3"
+  },
   "license": "MIT",
   "devDependencies": {
     "typescript": "^3.4.5"
