@@ -168,6 +168,8 @@ export default class ThemeUpdaterPlugin extends React.Component<{}, {}> {
         // Set the active theme to the newly updated i.e. reload.
         // @ts-ignore
         AppEnv.themes.setActiveTheme(theme);
+      } else {
+        console.log("Current theme up to date with remote.");
       }
     } else {
       console.log("Current theme is part of mailspring so not updating.");
