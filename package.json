@@ -4,10 +4,13 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/danieljimeneznz/mailspring-theme-updater-plugin"
   },
   "scripts": {
-    "build": "tsc"
+    "copy-package": "node_modules/.bin/copyfiles package.json dist/mailspring-theme-updater-plugin",
+    "install-dist-packages": "cd dist/mailspring-theme-updater-plugin && npm install --production",
+    "build": "tsc",
+    "post-build": "npm run copy-package && npm run install-dist-packages"
   },
   "engines": {
     "mailspring": ">=1.6.1"
@@ -18,10 +21,11 @@
   },
   "description": "Enter a description of your package!",
   "dependencies": {
-    "nodegit": "^0.24.3"
+    "@octokit/rest": "^16.28.1"
   },
   "license": "MIT",
   "devDependencies": {
+    "copyfiles": "^2.1.0",
     "typescript": "^3.4.5"
   }
 }
