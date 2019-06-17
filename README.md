@@ -1,8 +1,8 @@
 # Mailspring Theme Updater Plugin
 
-**NOTE: THIS PLUGIN IS A WIP.**
-
 This plugin aims to be a quick fix for keeping a theme up to date with its remote counterpart.
+
+If you like this plugin, check out my Mailspring theme inspired by Inbox, and Google Cloud Console: [Mailspring Agapanthus Theme](https://github.com/danieljimeneznz/mailspring-agapanthus-theme)
 
 ## Build Instructions
 
@@ -16,10 +16,12 @@ would be super easy).
 3. Run `npm run build` in the plugin directory which will output the compiled files in
    `root/mailspring-theme-updater-plugin/dist/mailspring-theme-updater-plugin/lib` (Note, errors may occur due to compilation errors with the
    Mailspring repository, check the output lib files were compiled correctly).
-4. Copy the `package.json` into the `root/mailspring-theme-updater-plugin/dist/mailspring-theme-updater-plugin` folder.
+4. Run `npm run post-build` in the plugin directory which will copy the `package.json` into the `root/mailspring-theme-updater-plugin/dist/mailspring-theme-updater-plugin/lib` folder
+   and install the corresponding dependencies.
 5. Install the plugin!
 
 ## Notes
 
-Types are referenced by the `tsconfig.json` file including the `../Mailspring/app/src/global/*` files, which contain the
-declarations for the types that Mailspring exports.
+- Types are referenced by the `tsconfig.json` file including the `../Mailspring/app/src/global/*` files, which contain the
+  declarations for the types that Mailspring exports.
+- This plugin only supports updating themes that have a github remote.

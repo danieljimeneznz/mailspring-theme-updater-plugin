@@ -1,7 +1,7 @@
 {
   "name": "theme-updater",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/danieljimeneznz/mailspring-theme-updater-plugin"
@@ -19,7 +19,7 @@
     "default": true,
     "composer": true
   },
-  "description": "Enter a description of your package!",
+  "description": "MailSpring theme updater plugin keeps theme up to date with remote.",
   "dependencies": {
     "@octokit/rest": "^16.28.1"
   },
