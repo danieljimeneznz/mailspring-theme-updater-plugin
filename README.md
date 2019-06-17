@@ -1,4 +1,4 @@
-# Mailspring Theme Updater Plugin
+# Mailspring Theme Updater Plugin - [Download v1.0.0](https://github.com/danieljimeneznz/mailspring-theme-updater-plugin/releases/download/v1.0.0/mailspring-theme-updater-plugin.zip)
 
 This plugin aims to be a quick fix for keeping a theme up to date with its remote counterpart.
 
