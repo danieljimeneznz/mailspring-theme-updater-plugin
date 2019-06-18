@@ -24,4 +24,8 @@ would be super easy).
 
 - Types are referenced by the `tsconfig.json` file including the `../Mailspring/app/src/global/*` files, which contain the
   declarations for the types that Mailspring exports.
+  
+## Current Plugin Constraints
 - This plugin only supports updating themes that have a github remote.
+- This plugin currently only works when the git repo folder has a remote that ends in ".git" and the `package.json` does not (to be fixed in issue [#4](https://github.com/danieljimeneznz/mailspring-theme-updater-plugin/issues/4)).
+- GitHub unauthenticated API only allows for 60 calls/hour, which will leave the theme directory in an un-usable state (to be fixed in issue [#2](https://github.com/danieljimeneznz/mailspring-theme-updater-plugin/issues/2) which will use a .staging directory to get all updates over time or allow user to put in an api-key like value or use git to perform the updates (somehow)).
